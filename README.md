@@ -74,7 +74,3 @@ Este relatório sumariza uma análise comparativa e observações técnicas sobr
 - Gerar um checklist de hardening e um playbook de execução reproduzível (scripts que constroem/limpam/validam).
 - Implementar um pequeno conjunto de testes automáticos (pytest + requests) que verifiquem: health, criação de lease e operação NAT básica.
 - Consolidar recomendações de UI/UX no `templates/` para tornar a interface administrativa consistente entre artefatos.
-
----
-
-Relatório gerado automaticamente como entrega preliminar; posso: 1) detalhar cada ponto com patches propostos, 2) abrir PRs para correções rápidas (ex.: validar input, ajustar entrada do `nft`), ou 3) gerar os testes iniciais. Indique qual ação prefere.
