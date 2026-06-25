@@ -2,7 +2,7 @@
 
 ## Identificação
 
-**Nome do aluno:** LEAS. O nome foi inferido a partir do histórico Git dos três repositórios, que registra commits como `LEAS <aluno@unipampa.edu.br>`. As licenças dos artefatos também indicam `ljb-aluno-unipampa` como detentor de copyright.
+**Nome do aluno:** Leonardo Bitzki, utilizando "LEAS" como registro do histórico Git dos três repositórios, que registra commits como `LEAS <aluno@unipampa.edu.br>`. As licenças dos artefatos também indicam `ljb-aluno-unipampa` como detentor de copyright.
 
 **Título do artefato avaliado:** Laboratório Dockerizado de Gateway para DHCP, NAT e Firewall com Kea DHCP, nftables e API Flask.
 
