@@ -293,6 +293,16 @@ Escala: 1 = fraco, 2 = parcial, 3 = adequado, 4 = bom, 5 = excelente.
 2. [coder-deepseek](https://github.com/ljb-aluno-unipampa/coder-deepseek): melhor implementação do firewall base e excelente simplicidade operacional. Fica atrás por menor modularidade, ausência de testes e lacunas formais no README.
 3. [coder-gemini](https://github.com/ljb-aluno-unipampa/coder-gemini): funcional e demonstrável via dashboard, mas menos aderente ao padrão SBSeg e com maior acoplamento técnico/documental.
 
+## Interpretação dos Selos SBSeg 2026
+
+| Repositório | Artefatos Disponíveis (SeloD) | Artefatos Funcionais (SeloF) | Artefatos Sustentáveis (SeloS) | Experimentos Reprodutíveis (SeloR) |
+| --- | --- | --- | --- | --- |
+| [coder-deepseek](https://github.com/ljb-aluno-unipampa/coder-deepseek) | Concedido com ressalvas | Selo concedido | Concedido com ressalvas | Concedido com ressalvas |
+| [coder-gemini](https://github.com/ljb-aluno-unipampa/coder-gemini) | Concedido com ressalvas | Selo concedido | Selo negado | Concedido com ressalvas |
+| [coder-gpt](https://github.com/ljb-aluno-unipampa/coder-gpt) | Concedido com ressalvas | Concedido com ressalvas | Concedido com ressalvas | Concedido com ressalvas |
+
+Esta interpretação considera que nenhum repositório apresentou evidência clara de release arquivada ou identificador persistente, por isso o SeloD não foi atribuído sem ressalvas. O SeloF foi concedido integralmente a [coder-deepseek](https://github.com/ljb-aluno-unipampa/coder-deepseek) e [coder-gemini](https://github.com/ljb-aluno-unipampa/coder-gemini) porque ambos executaram o fluxo principal sem falhas observadas nos smoke tests; [coder-gpt](https://github.com/ljb-aluno-unipampa/coder-gpt) recebeu ressalva por falha estática em arquivo Python e retorno não saudável no status DHCP via Control Agent. O SeloS foi negado a [coder-gemini](https://github.com/ljb-aluno-unipampa/coder-gemini) pela combinação de documentação científica incompleta, UI inline acoplada, permissões amplas e ausência de testes. O SeloR foi mantido com ressalvas nos três casos porque a reprodução básica foi possível, mas nenhum deles possui automação robusta de testes experimentais.
+
 ## Reflexão Crítica
 
 A melhor solução como artefato científico é [coder-gpt](https://github.com/ljb-aluno-unipampa/coder-gpt), porque oferece a experiência mais completa para um avaliador: README amplo, documentos auxiliares, instalação clara, teste mínimo, experimentos por reivindicação, endpoints listados e estratégia explícita de limpeza. Esse conjunto favorece os critérios SBSeg de funcionalidade, sustentabilidade e reprodutibilidade. Ainda assim, ele não deve ser considerado pronto sem correções: [gateway/gwapi_app/init.py](https://github.com/ljb-aluno-unipampa/coder-gpt/gateway/gwapi_app/init.py:7) falha em validação estática, o status DHCP via Control Agent não retornou sucesso, os endpoints REST de firewall aceitam escrita sem autenticação, e o firewall gerado por [gateway/start-gateway.sh](https://github.com/ljb-aluno-unipampa/coder-gpt/gateway/start-gateway.sh:96) é permissivo demais para a proposta de cibersegurança.
